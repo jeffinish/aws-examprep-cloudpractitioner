@@ -107,3 +107,95 @@
 - B) Amazon Inspector; - *É um serviço que executa avaliações de segurança em instâncias do EC2*
 - **C) Políticas do AWS Identity and Access Management (IAM);**
 - D) Grupos de Segurança - *Security Groups são firewalls no nível da instância EC2.*
+
+### Recursos para o suporte de segurança
+
+- Identificar recursos par ao suporte de segurança.
+- É importante entender que caso você não seja um profissional de segurança, você não será a pessoa responsável por construir soluções de segurança, **mas será a pessoa que orientará as pessoas com relação às soluções que atendam às necessidades delas.**. Para fazê-lo, você precisa saber quais serviços existem para isto e onde encontrar informações sobre os mesmos.
+
+- No que diz respeito a segurança de rede, você precisa estar apto a responder questões sobre a funcionalidade básica para serviços de segurança na AWS como:
+  - Grupos de Segurança (Security Groups);
+  - Listas de controle de acesso à rede;
+  - AWS Web Application Firewall (WAF).
+Não é necessários saber as funcionalidades de cada um deles mas saber quando usá-los e quais as suas funções.
+
+- É imporante estar ciente que existem serviços como AWS Trusted Advisor e Amazon Inspector, que podem fornecer recomendações sobre segurança.
+- Ainda, é importante saber que em alguns casos, a solução para seus problemas de segurança e compliance pode estar em ferramentas terceiras. Estas ferramentas podem ser encontradas na **AWS Marketplace**. É importante entender a diferença entre ferramentas e softwares encontrados no Marketplace versus soluções nativas da AWS.
+
+- Ser capaz de utilizar o **AWS Knowledge Center** para encontrar mais informações e respostas para perguntas mais profundas, assim como no **Security Center, blogs e fórum de segurança da AWS.**
+
+#### Question Walkthrough
+**Pergunta:** Qual serviço ou recurso da AWS pode ser usado para **impedir ataques de injeção SQL**?
+**Respostas:**
+- A) Security Groups; - *São firewalls no nível de instâncias EC2. Security Groups permitem tráfego na EC2 com base em Portas, Protocolos e Origem/Destino. Eles não são capazes de inspecionar um pacote HTTP.*
+- B) ACLs de rede; - *Os ACLs de rede controlam o tráfego com base no tipo do tráfego, porta, protoclo, origem/destino.*
+- **C) AWS WAF;** - *É um firewall que pode filtrar tráfego com base em qualquer parte da solicitação, como endereços IP, cabeçalhos HTTP, corpo HTTP ou strings URI.*
+- D) Políticas do IAM - *Policies são anexadas às entidades da AWS, como usuários, grupos ou perfis do IAM, definindo quais ações podem ou não ser tomadas.*
+
+- **Security Groups x ACLs:** Security Groups são firewall no nível de instâncias EC2 enquanto ACLs são firewalls no nível de SubRede.
+
+
+### Domain Notes
+
+- Leia o whitepaper [Introdução à segurança da AWS](https://docs.aws.amazon.com/whitepapers/latest/introduction-aws-security/welcome.html).
+
+- Saiba mais sobre o [Modelo de responsabilidade compartilhada da AWS](https://aws.amazon.com/compliance/shared-responsibility-model/).
+
+- O AWS Artifact é sua primeira opção de recurso para informações relacionadas à conformidade que importam para você. Ele oferece acesso sob demanda aos relatórios de segurança e conformidade da AWS e a contratos on-line específicos. Saiba mais sobre o [AWS Artifact](https://aws.amazon.com/artifact/).
+  
+- Leia o whitepaper [Amazon Web Services: risco e conformidade](https://docs.aws.amazon.com/whitepapers/latest/aws-risk-and-compliance/welcome.html).
+
+- Saiba mais sobre os [Programas de conformidade da AWS](https://aws.amazon.com/compliance/programs/).
+
+- Saiba mais sobre os [Serviços de segurança da AWS](https://aws.amazon.com/products/security/?nc=sn&loc=2).
+
+- Saiba mais sobre o [AWS Identity and Access Management (IAM)](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html).
+
+- Saiba mais sobre o [princípio de menor privilégio](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege).
+
+- Saiba mais sobre o [Usuário-raiz da conta da AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html).
+
+- Saiba mais sobre a [autenticação multifator (MFA) do usuário-raiz da conta no IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html#id_root-user_manage_mfa).
+
+- Saiba mais sobre as [tarefas que exigem o acesso do usuário-raiz à conta](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html#aws_tasks-that-require-root).
+
+- Saiba mais sobre o [AWS CloudTrail](https://aws.amazon.com/cloudtrail/).
+- 
+- Saiba mais sobre o [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/).
+
+- Saiba mais sobre o [AWS Config](https://aws.amazon.com/config/).
+
+- Explore a [central de conhecimento da AWS](https://aws.amazon.com/premiumsupport/knowledge-center/).
+
+- Explore a [Central de Segurança da AWS](https://aws.amazon.com/security/).
+
+- Explore os [fóruns de discussão de segurança da AWS](https://repost.aws/tags/TAearVnHruTomUO6FRBaV35A?origin=forums). (Observação: exige que você inicie a sessão na conta da AWS.)
+
+- Explore o [Blog de segurança da AWS](https://aws.amazon.com/blogs/security/).
+
+- Saiba mais sobre as [listas de controle de acesso (ACLs de rede) na AWS](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html).
+
+- Saiba mais sobre [grupos de segurança](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html).
+
+- Saiba mais sobre as [práticas recomendadas de segurança para nuvens privadas virtuais (VPCs)](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html).
+
+### Fechamento
+- Segurança e Compliance são chamados de **TRABALHO ZERO**** na AWS. Isto significa que segurança e compliance são mais importantes do que qualquer outra prioridade.
+- Para evitar violações de segurança, você deve saber como a segurança é abordada dentro da AWS e quais ferramentas e serviços existem para dar suporte a um plano de segurança e compliance.
+
+- **Exemplo:** Saber que o modelo de responsabilidade compartilhada define quem é responsável pelo que na AWS. A partir destas ideias, que são apenas diretrizes, é necessário entendê-las e colocá-las em prática.
+  - Entender que seus dados pertencem a você na AWS, você precisa saber quais os programas de compliance você precisa aderir para proteger esses dados. Isto inclui criptografia, como assegurar a criptografia de dados ociosos e em trânsito;
+  - Entender quais tipos de técnias de criptografias podem ser aplicadas e quais serviços da AWS oferecem ferramentas ou recursos de criptografia podem te ajudar a implementar uma boa prática de segurança ao usar a AWS;
+  - **Exemplo Prático:** Sua empresa está em busca de uma solução para armazenamento de daos que atenda às necessidades de compliance e você está ajudando a tomar as decisões de design.
+    - Um ótimo serviço de armazenamento é o Amazon S3;
+    - Saber que no S3 você pode ativar criptografia no nível do Bucket pode ajudar a fazer recomendações de design que atendam às normas de conformidade
+  - **Ao invés de construir soluções do zero, você pode simplesmente usar os recursos e serviços integrados na AWS.** 
+- Como parte do exame, você precisa saber quais serviços da AWs existem para identificar e auditar eventos relacionados à segurança, como:
+  - AWS CloudWatch;
+  - AWS CloudTrail;
+  - AWS Config;
+  - AWS Inspector;
+  - Entre Outros...
+- **O motivo para conhecer estes recursos é que geralmente os incidentes relacionados à segurança não são totalmente óbvios. Para identificar os eventos relacionados à segurança, você precisa ter visibilidade sobre seus recursos da AWS, além de poder ver o histórico de eventos que ocorream em sua conta AWS.**
+- **Exemplo:** Digamos que alguém está repetidamente assumir uma role para obter acesso à credenciais. Como saber se isso está acontecendo em sua conta?
+  - Se você não souber onde procurar, pode ser difícil buscar por informações. Porém *se você souber, dê uma olhada nos logs do CloudTrail*, onde esse tipo de atividade de API da AWS é capturado.

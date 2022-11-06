@@ -129,4 +129,3 @@
   Saiba mais em: [Os cinco pilares do AWS Well-Architected Framework](https://aws.amazon.com/pt/blogs/apn/the-6-pillars-of-the-aws-well-architected-framework/)
 
 ### Fechamento
--
